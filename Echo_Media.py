@@ -4,8 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # قراءة ملف Excel
-file_path = r"C:\Users\mosta\Desktop\Echo-Media\ramadan2018.xlsx"
-df = pd.read_excel(file_path)
+file_path = "ramadan2018.xlsx"
+df = pd.read_excel(file_path, engine='openpyxl')
 
 # تنظيف أسماء الأعمدة وتحويل Air Date إلى تاريخ فقط
 df.columns = df.columns.str.strip().str.lower()
@@ -116,3 +116,10 @@ elif selected_page == "📈 Charts":
     
     # عرض الرسم البياني
     st.pyplot(fig)
+
+
+
+
+
+
+    
